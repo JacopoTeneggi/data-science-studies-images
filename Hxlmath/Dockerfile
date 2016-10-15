@@ -5,7 +5,4 @@ RUN apt-get update -y && \
     git \ 
     haskell-platform
 
-RUN cabal update && \
-    cabal install matrix
-
 RUN git clone https://github.com/JacopoTeneggi/data-science-studies.git /hxlmath && cd /hxlmath && git checkout hxlmath
