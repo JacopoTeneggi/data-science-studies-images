@@ -1,8 +1,11 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 
-RUN apt-get update -y
-
-RUN apt-get install -y haskell-platform
+RUN apt-get update -y && \
+    apt-get install -y \
+    git \ 
+    haskell-platform
 
 RUN cabal update && \
     cabal install matrix
+
+RUN git clone https://github.com/JacopoTeneggi/data-science-studies.git /hxlmath && cd /hxlmath && git checkout hxlmath
